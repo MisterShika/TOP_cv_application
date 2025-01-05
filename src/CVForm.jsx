@@ -8,7 +8,14 @@ function CVForm () {
         name: "",
         email: "",
         phone: "",
-        jobs: []
+        jobs: [
+            {
+                id: crypto.randomUUID(),
+                title: "",
+                company: "",
+                description: "",
+            }
+        ]
     });
 
     const testClick = (event) => {

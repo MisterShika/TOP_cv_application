@@ -1,11 +1,10 @@
-import { useState } from "react";
-
 function PrevJobs ({formData, setFormData}) {
 
     const addJob = () => {
         const newJob = {
             id: crypto.randomUUID(),
             title: "",
+            company: "",
             description: ""
         };
         setFormData((prevData) => ({
@@ -20,7 +19,9 @@ function PrevJobs ({formData, setFormData}) {
             ...prevData,
             jobs: prevData.jobs.map((job) =>
                 job.id === jobId
-                    ? { ...job, [name]: value }
+                    ? { ...job, 
+                        [name]: value
+                    }
                     : job
             ),
         }));
@@ -31,19 +32,37 @@ function PrevJobs ({formData, setFormData}) {
             <ul>
                 {formData.jobs.map((job) =>
                     <li key={job.id}>
-                        <label htmlFor={job.id}>Title:</label>
+                        <label htmlFor={`job-title-${job.id}`}>Title:</label>
                         <input
                             type="text"
-                            id={job.id} // Use curly braces, not quotes, to inject the ID
-                            name="title" // Match the field name in your job object
+                            id={`job-title-${job.id}`}
+                            name="title"
                             placeholder="Enter your job title"
                             value={job.title}
-                            onChange={(e) => handleChange(e, job.id)} // Pass job.id to identify which job to update
+                            onChange={(e) => handleChange(e, job.id)}
+                        />
+                        <label htmlFor={`company-name-${job.id}`}>Company Name:</label>
+                        <input
+                            type="text"
+                            id={`company-name-${job.id}`}
+                            name="company"
+                            placeholder="Enter company name"
+                            value={job.company}
+                            onChange={(e) => handleChange(e, job.id)}
+                        />
+                        <label htmlFor={`job-description-${job.id}`}>Description:</label>
+                        <input
+                            type="text"
+                            id={`job-description-${job.id}`}
+                            name="description"
+                            placeholder="Enter job description"
+                            value={job.description}
+                            onChange={(e) => handleChange(e, job.id)}
                         />
                     </li>
                 )}
             </ul>
-            <button onClick={addJob}>Test</button>
+            <button onClick={addJob}>Add Job</button>
         </div>
     );
 };
