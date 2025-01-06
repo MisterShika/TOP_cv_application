@@ -8,12 +8,23 @@ function CVForm () {
         name: "",
         email: "",
         phone: "",
+        education: [
+            {
+                id: crypto.randomUUID(),
+                school: "",
+                major: "",
+                dateStart: "",
+                dateEnd: "",
+            }
+        ],
         jobs: [
             {
                 id: crypto.randomUUID(),
                 title: "",
                 company: "",
                 description: "",
+                dateStart: "",
+                dateEnd: "",
             }
         ]
     });
