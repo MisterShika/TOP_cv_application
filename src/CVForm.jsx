@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import './style/CVForm.css'
 import PrevJobs from './PrevJobs';
+import PrevEducation from './PrevEducation';
 
 
 function CVForm () {
@@ -54,6 +55,8 @@ function CVForm () {
 
             <label htmlFor="phone">Phone:</label>
             <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" value={formData.phone} onChange={handleChange} required />
+
+            <PrevEducation formData={formData} setFormData={setFormData} />
 
             <PrevJobs formData={formData} setFormData={setFormData} />
 
