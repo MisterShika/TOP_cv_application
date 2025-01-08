@@ -28,41 +28,47 @@ function PrevJobs ({formData, setFormData}) {
     };
 
     return (
-        <div>
+        <div className="job-area">
             <ul>
                 {formData.jobs.map((job) =>
                     <li key={job.id}>
-                        <label htmlFor={`job-title-${job.id}`}>Title:</label>
-                        <input
-                            type="text"
-                            id={`job-title-${job.id}`}
-                            name="title"
-                            placeholder="Enter your job title"
-                            value={job.title}
-                            onChange={(e) => handleChange(e, job.id)}
-                        />
-                        <label htmlFor={`company-name-${job.id}`}>Company Name:</label>
-                        <input
-                            type="text"
-                            id={`company-name-${job.id}`}
-                            name="company"
-                            placeholder="Enter company name"
-                            value={job.company}
-                            onChange={(e) => handleChange(e, job.id)}
-                        />
-                        <label htmlFor={`job-description-${job.id}`}>Description:</label>
-                        <input
-                            type="text"
-                            id={`job-description-${job.id}`}
-                            name="description"
-                            placeholder="Enter job description"
-                            value={job.description}
-                            onChange={(e) => handleChange(e, job.id)}
-                        />
+                        <div>
+                            <label htmlFor={`job-title-${job.id}`}>Title:</label>
+                            <input
+                                type="text"
+                                id={`job-title-${job.id}`}
+                                name="title"
+                                placeholder="Enter your job title"
+                                value={job.title}
+                                onChange={(e) => handleChange(e, job.id)}
+                            />
+                        </div>
+                        <div>
+                            <label htmlFor={`company-name-${job.id}`}>Company Name:</label>
+                            <input
+                                type="text"
+                                id={`company-name-${job.id}`}
+                                name="company"
+                                placeholder="Enter company name"
+                                value={job.company}
+                                onChange={(e) => handleChange(e, job.id)}
+                            />
+                        </div>
+                        <div>
+                            <label htmlFor={`job-description-${job.id}`}>Description:</label>
+                            <input
+                                type="text"
+                                id={`job-description-${job.id}`}
+                                name="description"
+                                placeholder="Enter job description"
+                                value={job.description}
+                                onChange={(e) => handleChange(e, job.id)}
+                            />
+                        </div>
                     </li>
                 )}
             </ul>
-            <button onClick={addJob}>Add Job</button>
+            <button onClick={addJob} className="cv-button">Add Job</button>
         </div>
     );
 };

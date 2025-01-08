@@ -29,34 +29,38 @@ function PrevEducation ({formData, setFormData}) {
     }
 
     return (
-        <div>
+        <div className="education-area">
             <ul>
                 {
                     formData.education.map((education) => 
                         <li key={education.id}>
-                            <label htmlFor={`school-${education.id}`}>School:</label>
-                            <input
-                                type="text"
-                                id={`school-${education.id}`}
-                                name="school"
-                                placeholder="Enter your job title"
-                                value={education.school}
-                                onChange={(e) => handleChange(e, education.id)}
-                            />
-                            <label htmlFor={`major-${education.id}`}>Major: </label>
-                            <input
-                                type="text"
-                                id={`major-${education.id}`}
-                                name="major"
-                                placeholder="Enter your major"
-                                value={education.major}
-                                onChange={(e) => handleChange(e, education.id)}
-                            />
+                            <div>
+                                <label htmlFor={`school-${education.id}`}>School:</label>
+                                <input
+                                    type="text"
+                                    id={`school-${education.id}`}
+                                    name="school"
+                                    placeholder="Enter your job title"
+                                    value={education.school}
+                                    onChange={(e) => handleChange(e, education.id)}
+                                />
+                            </div>
+                            <div>
+                                <label htmlFor={`major-${education.id}`}>Major: </label>
+                                <input
+                                    type="text"
+                                    id={`major-${education.id}`}
+                                    name="major"
+                                    placeholder="Enter your major"
+                                    value={education.major}
+                                    onChange={(e) => handleChange(e, education.id)}
+                                />
+                            </div>
                         </li> 
                     )
                 }
             </ul>
-            <button onClick={addEducation}>Add Education</button>
+            <button onClick={addEducation} className="cv-button">Add Education</button>
         </div>
     );
 }
