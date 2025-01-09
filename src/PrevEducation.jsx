@@ -15,7 +15,8 @@ function PrevEducation ({formData, setFormData}) {
         }));
     }
 
-    const addEducation = () => {
+    const addEducation = (event) => {
+        event.preventDefault();
         const newEducation = {
             id: crypto.randomUUID(),
             title: "",

@@ -1,6 +1,7 @@
 function PrevJobs ({formData, setFormData}) {
 
-    const addJob = () => {
+    const addJob = (event) => {
+        event.preventDefault();
         const newJob = {
             id: crypto.randomUUID(),
             title: "",
