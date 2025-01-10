@@ -24,7 +24,7 @@ form{
     flex-grow: 1;
 }
 .form-container{
-    width: 400px;
+    min-width: 400px;
 }
 .main-info,
 .education-area li,
@@ -53,22 +53,73 @@ h1{
     font-weight: bold;
     text-align: center;
     font-optical-sizing: auto;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+h2{
+    font-family: "Playwrite AU SA", serif;
+    font-size: 1.25em;
+    line-height: 1.5em;
+    margin: .5em 0;
+    text-align: center;
+}
+form{
+    border: 2px solid #344E41;
+    border-top: none;
+    background-color: #DAD7CD;
+    border-bottom-right-radius: 15px;
+    border-bottom-left-radius: 15px;
+}
+form input{
+    width: 100%;
+    font-size: 1.15em;
+    padding: 5px;
+    margin: 0;
+    border: 0;
+    box-sizing: border-box;
+    border-radius: 5px
 }
 label{
     font-family: "Quicksand", serif;
     font-optical-sizing: auto;
     font-weight: bold;
+    font-size: 1.3em;
     line-height: 1.25em;
-    margin-bottom: 5px
+    margin-bottom: 5px;
+    color: #344E41;
+}
+.main-info{
+    margin: 0 30px;
 }
 .main-info div,
 .education-area div,
 .job-area div{
+    width: 100%;
     margin: 5px 0;
+    padding: 0 15px;
 }
-
-.form-container{
-    background-color: #DAD7CD;
+.education-area li,
+.job-area li{
+    margin: 0 15px;
+    padding: 0 15px 5px 15px;
+    background: #A3B18A;
+    border-top: 1px solid #344E41;
+}
+.education-area label,
+.job-area label{
+    color: #000;
+}
+.education-area li:first-child,
+.job-area li:first-child{
+    border-top: 0;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+.education-area li:last-child,
+.job-area li:last-child{
+    padding-bottom: 10px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
 }
 
 .cv-button{

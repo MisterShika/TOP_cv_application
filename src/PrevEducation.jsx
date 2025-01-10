@@ -31,6 +31,7 @@ function PrevEducation ({formData, setFormData}) {
 
     return (
         <div className="education-area">
+            <h2>Education:</h2>
             <ul>
                 {
                     formData.education.map((education) => 

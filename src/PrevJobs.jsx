@@ -30,6 +30,7 @@ function PrevJobs ({formData, setFormData}) {
 
     return (
         <div className="job-area">
+            <h2>Previous Experience:</h2>
             <ul>
                 {formData.jobs.map((job) =>
                     <li key={job.id}>
