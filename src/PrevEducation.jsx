@@ -62,7 +62,7 @@ function PrevEducation ({formData, setFormData}) {
                     )
                 }
             </ul>
-            <button onClick={addEducation} className="cv-button">Add Education</button>
+            <button onClick={addEducation} className="cv-button"><span>Add Education</span></button>
         </div>
     );
 }

@@ -70,7 +70,7 @@ function PrevJobs ({formData, setFormData}) {
                     </li>
                 )}
             </ul>
-            <button onClick={addJob} className="cv-button">Add Job</button>
+            <button onClick={addJob} className="cv-button"><span>Add Job</span></button>
         </div>
     );
 };

@@ -18,6 +18,7 @@ html, body {
 }
 #root,
 .form-container,
+.data-container,
 form{
     display: flex;
     flex-direction: column;
@@ -63,7 +64,8 @@ h2{
     margin: .5em 0;
     text-align: center;
 }
-form{
+form,
+.data-container{
     border: 2px solid #344E41;
     border-top: none;
     background-color: #DAD7CD;
@@ -124,5 +126,38 @@ label{
 
 .cv-button{
     display: block;
-    margin: 0 auto;
+    background: #1b4332;
+    border-radius: 12px;
+    border: none;
+    padding: 0;
+    margin: 10px auto;
+    cursor: pointer;
+    outline-offset: 4px;
+}
+.cv-button span{
+    display: block;
+    padding: 6px 12px;
+    border-radius: 12px;
+    font-size: 1.15rem;
+    background: #2d6a4f;
+    color: white;
+    transform: translateY(-3px);
+}
+.cv-button span:hover{
+    background: #3b8d68;
+}
+.cv-button:active span{
+    transform: translateY(-2px);
+}
+
+.submit-button{
+    background: #005177;
+}
+.submit-button span{
+    background: #0095da;
+    padding: 12px 50px;
+    font-size: 2.5rem;
+}
+.submit-button span:hover{
+    background: #006b9c;
 }

@@ -4,9 +4,11 @@ import './style/CVForm.css'
 import MainInfo from './MainInfo';
 import PrevJobs from './PrevJobs';
 import PrevEducation from './PrevEducation';
+import DisplaySubmit from './DisplaySubmit';
 
 
 function CVForm () {
+    const [submittedData, setSubmittedData] = useState(null);
     const [formData, setFormData] = useState({
         name: "",
         email: "",
@@ -32,23 +34,30 @@ function CVForm () {
         ]
     });
 
-    const testClick = (event) => {
+    const submitData = (event) => {
         event.preventDefault();
+        setSubmittedData(formData);
         console.log(formData);
     };
 
     return(
     <div className="form-container">
         <h1>Curriculum Vitae</h1>
-        <form>
-            <MainInfo formData={formData} setFormData={setFormData} />
-
-            <PrevEducation formData={formData} setFormData={setFormData} />
-
-            <PrevJobs formData={formData} setFormData={setFormData} />
-
-            <button type="submit" onClick={testClick} className="submit-button cv-button">Submit</button>
-        </form>
+            {submittedData ? (
+                 <div>
+                    <DisplaySubmit formData={formData} setFormData={setFormData} setSubmittedData={setSubmittedData} />
+                </div>
+            ) : (
+                <form>
+                    <MainInfo formData={formData} setFormData={setFormData} />
+        
+                    <PrevEducation formData={formData} setFormData={setFormData} />
+        
+                    <PrevJobs formData={formData} setFormData={setFormData} />
+        
+                    <button type="submit" onClick={submitData} className="submit-button cv-button"><span>Submit</span></button>
+                </form>
+            )}
     </div>
     );
 }
