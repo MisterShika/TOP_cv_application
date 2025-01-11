@@ -165,3 +165,53 @@ i{
 .submit-button span:hover{
     background: #006b9c;
 }
+
+
+/**
+    Editing Area
+**/
+
+.data-container div{
+    display: flex;
+    align-items: center;
+}
+.data-container i{
+    font-size: 1.1em;
+    margin-left: 5px;
+    padding: 5px 4px 4px 6px;
+    border-radius: 6px;
+}
+.data-container i.fa-check{
+    background-color: #058c42;
+    color: #fff;
+}
+.data-container h3{
+    display: block;
+    font-family: "Playwrite AU SA", serif;
+    font-size: 1.1em;
+    line-height: 1.1em;
+    margin: .5em 0;
+}
+.data-container>ul{
+    padding: 10px 15px;
+}
+.data-container input{
+    width: 100%;
+    box-sizing: border-box;
+    padding: 5px 3px;
+    border: 1px solid #A3B18A;
+    background: #fff;
+}
+.data-container input:disabled{
+    background-color: #DAD7CD;
+    color: #000;
+    padding: 5px 3px;
+    box-sizing: border-box;
+}
+.data-container li>div{
+    margin-top: 3px;
+    margin-bottom: 3px;
+}
+.data-container ul li li{
+    margin-bottom: 15px;
+}

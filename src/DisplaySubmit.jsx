@@ -50,11 +50,16 @@ function DisplaySubmit ({formData, setFormData, setSubmittedData}) {
         }));
     }
 
+    const finishForm = () => {
+        console.log("Finish");
+        setSubmittedData(formData);
+    }
     
     return (
         <div className="data-container">
             <ul>
                 <li><h3>Name:</h3> 
+                <div>
                     <input 
                         type="text" 
                         id="name" 
@@ -65,8 +70,10 @@ function DisplaySubmit ({formData, setFormData, setSubmittedData}) {
                         required 
                         disabled />
                     <i className="fa-solid fa-pen-to-square" onClick={(event) => editAndSave('name', event.target)}></i>
+                </div>
                 </li>
                 <li><h3>Email:</h3>
+                <div>
                     <input 
                         type="text" 
                         id="email" 
@@ -77,8 +84,10 @@ function DisplaySubmit ({formData, setFormData, setSubmittedData}) {
                         required 
                         disabled />
                     <i className="fa-solid fa-pen-to-square" onClick={(event) => editAndSave('email', event.target)}></i>
+                </div>
                 </li>
                 <li><h3>Phone:</h3>
+                <div>
                     <input 
                         type="text" 
                         id="phone" 
@@ -89,6 +98,7 @@ function DisplaySubmit ({formData, setFormData, setSubmittedData}) {
                         required 
                         disabled />
                     <i className="fa-solid fa-pen-to-square" onClick={(event) => editAndSave('phone', event.target)}></i>
+                </div>
                 </li>
                 <li>
                     <h3>Education:</h3>
@@ -132,7 +142,6 @@ function DisplaySubmit ({formData, setFormData, setSubmittedData}) {
                             formData.jobs.map((job) => 
                                 <li key={job.id}>
                                     <div className="job-title">
-                                        {job.title}
                                         <input
                                         type="text" 
                                         id={`job-title-${job.id}`}
@@ -172,6 +181,9 @@ function DisplaySubmit ({formData, setFormData, setSubmittedData}) {
                             )
                         }
                     </ul>
+                </li>
+                <li>
+                    <button className="submit-button cv-button" onClick={finishForm}><span>Finish</span></button>
                 </li>
             </ul>
         </div>
