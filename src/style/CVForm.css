@@ -124,6 +124,10 @@ label{
     border-bottom-right-radius: 10px;
 }
 
+i{
+    cursor: pointer;
+}
+
 .cv-button{
     display: block;
     background: #1b4332;

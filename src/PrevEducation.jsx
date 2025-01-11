@@ -42,7 +42,7 @@ function PrevEducation ({formData, setFormData}) {
                                     type="text"
                                     id={`school-${education.id}`}
                                     name="school"
-                                    placeholder="Enter your job title"
+                                    placeholder="Enter school name"
                                     value={education.school}
                                     onChange={(e) => handleChange(e, education.id)}
                                 />
